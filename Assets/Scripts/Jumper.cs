@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Jumper : MonoBehaviour
 {
-    public float jumpForce = 0.001f; // Jump power.
+    float jumpForce = 0.001f; // Jump power.
   
     public static int score = 0; // Static variable for counting
 

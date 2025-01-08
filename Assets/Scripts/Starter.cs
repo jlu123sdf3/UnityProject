@@ -7,8 +7,8 @@ public class Starter : MonoBehaviour
 {
     float power = 0;
     float minPower = 0f;
-    [SerializeField] float maxPower = 10;  // Increased strength for more noticeable movement
-    [SerializeField] float powerStep = 3;  // Increased force step for faster ramp-up
+    float maxPower = 10;  // Increased strength for more noticeable movement
+    float powerStep = 3;  // Increased force step for faster ramp-up
     [SerializeField] UnityEngine.UI.Slider powerSlider;
     private Rigidbody ball = null;
     bool ballReady;

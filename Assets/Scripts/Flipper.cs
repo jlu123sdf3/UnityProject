@@ -6,8 +6,8 @@ public class Flipper : MonoBehaviour
 {
     [SerializeField] float restPos = 0f;
     [SerializeField] float pressedPos = 45f;
-    [SerializeField] float hitStrenght = 10f;
-    [SerializeField] float flipperDamper = 10f;
+    [SerializeField] float hitStrenght = 1000f;
+    [SerializeField] float flipperDamper = 50f;
     [SerializeField] private bool leftFlipper;
     private HingeJoint hinge;
     private JointSpring spring;

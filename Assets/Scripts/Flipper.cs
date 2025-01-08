@@ -27,8 +27,9 @@ public class Flipper : MonoBehaviour
             Rigidbody ballRigidbody = collision.gameObject.GetComponent<Rigidbody>();
             if (ballRigidbody != null)
             {
-                // Дополнительный импульс по направлению движения флиппера
-                Vector3 flipperForce = transform.right * hitStrenght * 0.001f; // Направление и сила импульса
+                // Additional impulse in the direction of movement of the flipper
+
+                Vector3 flipperForce = transform.right * hitStrenght * 0.001f; // Direction and strength of impulse
                 ballRigidbody.AddForce(flipperForce, ForceMode.Impulse);
             }
             Debug.Log("Flipper hit the ball with velocity: " + collision.relativeVelocity.magnitude);

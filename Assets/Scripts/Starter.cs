@@ -5,13 +5,14 @@ using UnityEngine.UI;
 
 public class Starter : MonoBehaviour
 {
-    float power;
+    float power = 0;
     float minPower = 0f;
-    [SerializeField] float maxPower = 500;  // Увеличили силу для более заметного движения
-    [SerializeField] float powerStep = 100;  // Увеличили шаг силы для более быстрого нарастания
+    [SerializeField] float maxPower = 10;  // Increased strength for more noticeable movement
+    [SerializeField] float powerStep = 3;  // Increased force step for faster ramp-up
     [SerializeField] UnityEngine.UI.Slider powerSlider;
     private Rigidbody ball = null;
     bool ballReady;
+    int increasing = 1;
 
     void Start()
     {
@@ -33,9 +34,9 @@ public class Starter : MonoBehaviour
             }
             if (Input.GetKeyUp(KeyCode.Space))
             {
-                // Добавляем увеличенную силу по оси Z
-                ball.AddForce(power * Vector3.forward, ForceMode.Impulse);  // Используем Impulse для мгновенной силы
-                power = minPower; // Сбрасываем силу после применения
+                // Add increased force along the Z axis
+                ball.AddForce(power * Vector3.forward, ForceMode.Impulse);  // Using Impulse for instant power
+                power = minPower; // Reset the power after use
             }
         }
         else

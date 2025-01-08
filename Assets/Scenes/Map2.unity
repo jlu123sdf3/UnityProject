@@ -368,6 +368,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jumper2 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 2359403143506377174, guid: 87eca2d57d6451a42a1bee1e04355fa0, type: 3}
+      propertyPath: jumpForce
+      value: 0.001
+      objectReference: {fileID: 0}
     - target: {fileID: 3043004780749429419, guid: 87eca2d57d6451a42a1bee1e04355fa0, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -9492,6 +9496,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jumper2
       objectReference: {fileID: 0}
+    - target: {fileID: 2359403143506377174, guid: 87eca2d57d6451a42a1bee1e04355fa0, type: 3}
+      propertyPath: jumpForce
+      value: 0.01
+      objectReference: {fileID: 0}
     - target: {fileID: 3043004780749429419, guid: 87eca2d57d6451a42a1bee1e04355fa0, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -9890,6 +9898,10 @@ PrefabInstance:
     - target: {fileID: 1820084349392346476, guid: 87eca2d57d6451a42a1bee1e04355fa0, type: 3}
       propertyPath: m_Name
       value: Jumper2 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2359403143506377174, guid: 87eca2d57d6451a42a1bee1e04355fa0, type: 3}
+      propertyPath: jumpForce
+      value: 0.001
       objectReference: {fileID: 0}
     - target: {fileID: 3043004780749429419, guid: 87eca2d57d6451a42a1bee1e04355fa0, type: 3}
       propertyPath: m_Mesh
@@ -10780,6 +10792,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FlipperLeft
       objectReference: {fileID: 0}
+    - target: {fileID: 7655002710181692702, guid: 6182afbcf833462418d894bbc9c9a80b, type: 3}
+      propertyPath: flipperDamper
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 8999544305999280795, guid: 6182afbcf833462418d894bbc9c9a80b, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -10800,6 +10816,10 @@ PrefabInstance:
     - target: {fileID: 635539024662183029, guid: f32b6a71c6c75c64c89a9d59d7ea6524, type: 3}
       propertyPath: m_Name
       value: FlipperRight
+      objectReference: {fileID: 0}
+    - target: {fileID: 2163244409683850250, guid: f32b6a71c6c75c64c89a9d59d7ea6524, type: 3}
+      propertyPath: flipperDamper
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 2856116768942269800, guid: f32b6a71c6c75c64c89a9d59d7ea6524, type: 3}
       propertyPath: m_Mesh
@@ -11730,6 +11750,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 307509639}
+    - target: {fileID: 5818215376762414507, guid: 764e79cf93ddf3a42b4ecde444f92b44, type: 3}
+      propertyPath: jumpForce
+      value: 0.001
+      objectReference: {fileID: 0}
     - target: {fileID: 6383096171635630972, guid: 764e79cf93ddf3a42b4ecde444f92b44, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -11758,6 +11782,10 @@ PrefabInstance:
     - target: {fileID: 1820084349392346476, guid: 87eca2d57d6451a42a1bee1e04355fa0, type: 3}
       propertyPath: m_Name
       value: Jumper2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2359403143506377174, guid: 87eca2d57d6451a42a1bee1e04355fa0, type: 3}
+      propertyPath: jumpForce
+      value: 0.001
       objectReference: {fileID: 0}
     - target: {fileID: 3043004780749429419, guid: 87eca2d57d6451a42a1bee1e04355fa0, type: 3}
       propertyPath: m_Mesh
@@ -11868,6 +11896,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1364787990}
+    - target: {fileID: 5818215376762414507, guid: 764e79cf93ddf3a42b4ecde444f92b44, type: 3}
+      propertyPath: jumpForce
+      value: 0.001
+      objectReference: {fileID: 0}
     - target: {fileID: 6383096171635630972, guid: 764e79cf93ddf3a42b4ecde444f92b44, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -13432,6 +13464,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jumper2 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2359403143506377174, guid: 87eca2d57d6451a42a1bee1e04355fa0, type: 3}
+      propertyPath: jumpForce
+      value: 0.001
+      objectReference: {fileID: 0}
     - target: {fileID: 3043004780749429419, guid: 87eca2d57d6451a42a1bee1e04355fa0, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -13545,6 +13581,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 484767671}
+    - target: {fileID: 5818215376762414507, guid: 764e79cf93ddf3a42b4ecde444f92b44, type: 3}
+      propertyPath: jumpForce
+      value: 0.001
+      objectReference: {fileID: 0}
     - target: {fileID: 6383096171635630972, guid: 764e79cf93ddf3a42b4ecde444f92b44, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -14274,6 +14314,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 89831084}
+    - target: {fileID: 5818215376762414507, guid: 764e79cf93ddf3a42b4ecde444f92b44, type: 3}
+      propertyPath: jumpForce
+      value: 0.001
+      objectReference: {fileID: 0}
     - target: {fileID: 6383096171635630972, guid: 764e79cf93ddf3a42b4ecde444f92b44, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -14343,6 +14387,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 2130620501}
+    - target: {fileID: 5818215376762414507, guid: 764e79cf93ddf3a42b4ecde444f92b44, type: 3}
+      propertyPath: jumpForce
+      value: 0.001
+      objectReference: {fileID: 0}
     - target: {fileID: 6383096171635630972, guid: 764e79cf93ddf3a42b4ecde444f92b44, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -14984,6 +15032,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6116091602739527445, guid: fb3b2aa2814ae1e4a88b2641f0ddc161, type: 3}
+      propertyPath: maxPower
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6116091602739527445, guid: fb3b2aa2814ae1e4a88b2641f0ddc161, type: 3}
+      propertyPath: powerStep
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6116091602739527445, guid: fb3b2aa2814ae1e4a88b2641f0ddc161, type: 3}
       propertyPath: powerSlider
       value: 
       objectReference: {fileID: 295919701}
@@ -15052,6 +15108,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 342653995}
+    - target: {fileID: 5818215376762414507, guid: 764e79cf93ddf3a42b4ecde444f92b44, type: 3}
+      propertyPath: jumpForce
+      value: 0.001
+      objectReference: {fileID: 0}
     - target: {fileID: 6383096171635630972, guid: 764e79cf93ddf3a42b4ecde444f92b44, type: 3}
       propertyPath: m_Mesh
       value: 

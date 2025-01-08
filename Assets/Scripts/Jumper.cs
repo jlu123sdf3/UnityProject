@@ -2,8 +2,9 @@ using UnityEngine;
 
 public class Jumper : MonoBehaviour
 {
-    public float jumpForce = 0.001f; // Сила прыжка
-    public static int score = 0; // Статическая переменная для счёта
+    public float jumpForce = 0.001f; // Jump power.
+  
+    public static int score = 0; // Static variable for counting
 
     void OnCollisionEnter(Collision collision)
     {
@@ -12,12 +13,12 @@ public class Jumper : MonoBehaviour
             Rigidbody ballRigidbody = collision.gameObject.GetComponent<Rigidbody>();
             if (ballRigidbody != null)
             {
-                // Добавляем силу прыжка
+                // Adding Jump Force
                 ballRigidbody.AddForce(Vector3.forward * jumpForce);
 
-                // Увеличиваем счёт
+                // Increasing the score
                 score++;
-                Debug.Log("Score: " + score); // Выводим счёт в консоль
+                Debug.Log("Score: " + score); // We output the score to the console
             }
         }
     }

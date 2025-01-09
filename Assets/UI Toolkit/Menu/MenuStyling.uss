@@ -22,9 +22,9 @@
     border-bottom-width: 7px;
     border-left-width: 3px;
     padding-bottom: 14px;
-    margin-top: 56px;
+    margin-top: 54px;
     -unity-font-definition: url("project://database/Assets/UI%20Toolkit/UnityThemes/Neon%20SDF.asset?fileID=11400000&guid=10f51b4829c3b4c40b0594192b118d30&type=2#Neon SDF");
-    cursor: url("project://database/Assets/UI%20Toolkit/select.png?fileID=2800000&guid=261fd1623b307034fa22c13ab95be47b&type=3#select");
+    cursor: url("project://database/Assets/UI%20Toolkit/pointer.png?fileID=2800000&guid=89fb373b4dbc5a242a05319f4946ec69&type=3#pointer");
 }
 
 .gray {
@@ -47,4 +47,13 @@
     border-top-color: rgb(78, 13, 13);
     border-bottom-color: rgb(78, 13, 13);
     background-color: rgb(141, 53, 53);
+}
+
+.btn:hover {
+    scale: 1.3 1.3;
+    margin-bottom: 10px;
+}
+
+.mainBtn {
+    scale: 1.2 1.2;
 }

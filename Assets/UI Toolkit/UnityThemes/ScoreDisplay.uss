@@ -1,0 +1,5 @@
+.ScoreDisplay {
+    background-color: rgba(253, 236, 236, 0);
+    font-size: 35px;
+    -unity-font-definition: url("project://database/Assets/UI%20Toolkit/UnityThemes/Neon%20SDF.asset?fileID=11400000&guid=10f51b4829c3b4c40b0594192b118d30&type=2#Neon SDF");
+}

@@ -12,7 +12,6 @@ public class Starter : MonoBehaviour
     [SerializeField] UnityEngine.UI.Slider powerSlider;
     private Rigidbody ball = null;
     bool ballReady;
-    int increasing = 1;
 
     void Start()
     {

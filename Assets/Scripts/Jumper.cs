@@ -6,6 +6,11 @@ public class Jumper : MonoBehaviour
   
     public static int score = 0; // Static variable for counting
 
+    PlayerPointsObject points;
+    private void Awake()
+    {
+        points = FindObjectOfType<PlayerPointsObject>();
+    }
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Ball"))
@@ -17,7 +22,7 @@ public class Jumper : MonoBehaviour
                 ballRigidbody.AddForce(Vector3.forward * jumpForce);
 
                 // Increasing the score
-                score++;
+                points.Score++;
                 Debug.Log("Score: " + score); // We output the score to the console
             }
         }

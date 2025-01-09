@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 public class MenuOptions : MonoBehaviour
@@ -30,6 +31,7 @@ public class MenuOptions : MonoBehaviour
     private void OnClickPlay(ClickEvent click)
     {
         Debug.Log("Play");
+        SceneManager.LoadScene("LevelChoice", LoadSceneMode.Single);
     }
     private void OnClickOpenSettings(ClickEvent click)
     {

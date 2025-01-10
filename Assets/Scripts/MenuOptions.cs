@@ -1,9 +1,12 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using UnityEngine.UIElements;
+using Button = UnityEngine.UIElements.Button;
 
 public class MenuOptions : MonoBehaviour
 {
@@ -12,12 +15,13 @@ public class MenuOptions : MonoBehaviour
     private Button scoreButton;
     private Button settingsButton;
     private Button quitButton;
-    private List<Button> allButtons;
+    public TextField nametagInputField;
     private void Awake()
     {
         document = GetComponent<UIDocument>();
         playbutton = document.rootVisualElement.Query(className: "btn").AtIndex(0) as Button;
         playbutton.RegisterCallback<ClickEvent>(OnClickPlay);
+        
 
         scoreButton = document.rootVisualElement.Query(className: "btn").AtIndex(1) as Button;
         scoreButton.RegisterCallback<ClickEvent>(OnClickOpenScores);
@@ -27,7 +31,17 @@ public class MenuOptions : MonoBehaviour
 
         quitButton = document.rootVisualElement.Query(className: "btn").AtIndex(3) as Button;
         quitButton.RegisterCallback<ClickEvent>(OnClickQuit);
+
+        nametagInputField = document.rootVisualElement.Q<TextField>();
+        nametagInputField.RegisterCallback<ChangeEvent<string>>((evt) =>
+        {
+            PlayerPrefs.SetString("nametag", evt.newValue);
+            PlayerPrefs.Save();
+
+        });
+
     }
+
     private void OnClickPlay(ClickEvent click)
     {
         Debug.Log("Play");

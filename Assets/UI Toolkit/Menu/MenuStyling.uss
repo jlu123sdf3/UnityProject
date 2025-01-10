@@ -24,7 +24,7 @@
     padding-bottom: 14px;
     margin-top: 54px;
     -unity-font-definition: url("project://database/Assets/UI%20Toolkit/UnityThemes/Neon%20SDF.asset?fileID=11400000&guid=10f51b4829c3b4c40b0594192b118d30&type=2#Neon SDF");
-    cursor: url("project://database/Assets/UI%20Toolkit/pointer.png?fileID=2800000&guid=89fb373b4dbc5a242a05319f4946ec69&type=3#pointer");
+    cursor: url("project://database/Assets/UI%20Toolkit/Menu/pointer.png?fileID=2800000&guid=89fb373b4dbc5a242a05319f4946ec69&type=3#pointer");
 }
 
 .gray {
@@ -56,4 +56,32 @@
 
 .mainBtn {
     scale: 1.2 1.2;
+}
+
+TextField > TextInput {
+    background-color: rgba(197, 143, 143, 0);
+    border-left-color: rgba(56, 56, 56, 0);
+    border-right-color: rgba(56, 56, 56, 0);
+    border-top-color: rgba(56, 56, 56, 0);
+    border-bottom-color: rgba(56, 56, 56, 0);
+    font-size: 28px;
+    cursor: url("project://database/Assets/UI%20Toolkit/Menu/pointer.png?fileID=2800000&guid=89fb373b4dbc5a242a05319f4946ec69&type=3#pointer");
+}
+
+TextField {
+    cursor: url("project://database/Assets/UI%20Toolkit/Menu/cursor.png?fileID=2800000&guid=ccd4df7712b9dfc4ca6f2d69da6117d0&type=3#cursor");
+}
+
+TextField > Label {
+    cursor: url("project://database/Assets/UI%20Toolkit/Menu/cursor.png?fileID=2800000&guid=ccd4df7712b9dfc4ca6f2d69da6117d0&type=3#cursor");
+}
+
+TextField > TextInput:hover {
+    background-color: rgba(197, 143, 143, 0);
+    border-left-color: rgba(56, 56, 56, 0);
+    border-right-color: rgba(56, 56, 56, 0);
+    border-top-color: rgba(56, 56, 56, 0);
+    border-bottom-color: rgba(56, 56, 56, 0);
+    font-size: 28px;
+    cursor: url("project://database/Assets/UI%20Toolkit/Menu/pointer.png?fileID=2800000&guid=89fb373b4dbc5a242a05319f4946ec69&type=3#pointer");
 }

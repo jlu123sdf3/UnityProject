@@ -1,0 +1,11 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/Menu/MenuStyling.uss?fileID=7433441132597879392&amp;guid=0ef336536058adf46b6121acaea44331&amp;type=3#MenuStyling" />
+    <ui:VisualElement name="Root" style="flex-grow: 1; justify-content: center; align-items: center; align-self: center; margin-top: 158px; margin-bottom: 220px;">
+        <ui:Label tabindex="-1" text="GAME OVER" parse-escape-sequences="true" display-tooltip-when-elided="true" class="title" style="-unity-font-definition: url(&quot;project://database/Assets/UI%20Toolkit/UnityThemes/Championship%20SDF.asset?fileID=11400000&amp;guid=bf4b3ba0cb12824488064df65ae9c1eb&amp;type=2#Championship SDF&quot;);" />
+        <ui:Label tabindex="-1" text="Score: " parse-escape-sequences="true" display-tooltip-when-elided="true" style="-unity-font-definition: url(&quot;project://database/Assets/UI%20Toolkit/UnityThemes/Neon%20SDF.asset?fileID=11400000&amp;guid=10f51b4829c3b4c40b0594192b118d30&amp;type=2#Neon SDF&quot;); font-size: 97px;" />
+        <ui:VisualElement style="flex-grow: 1; flex-direction: row; align-items: auto; justify-content: flex-start; align-self: center;">
+            <ui:Button text="Play again" parse-escape-sequences="true" display-tooltip-when-elided="true" class="btn green mainBtn" style="margin-left: 2px; margin-right: 40px;" />
+            <ui:Button text="Main menu" parse-escape-sequences="true" display-tooltip-when-elided="true" class="btn red mainBtn" style="margin-left: 40px;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

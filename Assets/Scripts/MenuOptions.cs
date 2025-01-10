@@ -33,9 +33,9 @@ public class MenuOptions : MonoBehaviour
         quitButton.RegisterCallback<ClickEvent>(OnClickQuit);
 
         nametagInputField = document.rootVisualElement.Q<TextField>();
-        nametagInputField.RegisterCallback<ChangeEvent<string>>((evt) =>
+        nametagInputField.RegisterCallback<ChangeEvent<string>>((changeEvent) =>
         {
-            PlayerPrefs.SetString("nametag", evt.newValue);
+            PlayerPrefs.SetString("nametag", changeEvent.newValue);
             PlayerPrefs.Save();
 
         });
@@ -44,7 +44,6 @@ public class MenuOptions : MonoBehaviour
 
     private void OnClickPlay(ClickEvent click)
     {
-        Debug.Log("Play");
         SceneManager.LoadScene("LevelChoice", LoadSceneMode.Single);
     }
     private void OnClickOpenSettings(ClickEvent click)
@@ -57,6 +56,7 @@ public class MenuOptions : MonoBehaviour
     }
     private void OnClickQuit(ClickEvent click)
     {
-        Debug.Log("Quit");
+        // Only works in build, not IDE
+        Application.Quit();
     }
 }

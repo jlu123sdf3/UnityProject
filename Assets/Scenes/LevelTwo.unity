@@ -9441,6 +9441,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 709332108096432470, guid: 8a6cf5a870b87574db24e9e85bac326d, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4130466794565275104, guid: 8a6cf5a870b87574db24e9e85bac326d, type: 3}
       propertyPath: m_Name
       value: Ball
@@ -12058,6 +12062,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1886814297474136732, guid: aaac35f660ffab346b03603ad3d498d0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1929152084}
+    - targetCorrespondingSourceObject: {fileID: 1886814297474136732, guid: aaac35f660ffab346b03603ad3d498d0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1929152085}
   m_SourcePrefab: {fileID: 100100000, guid: aaac35f660ffab346b03603ad3d498d0, type: 3}
 --- !u!43 &916308575
 Mesh:
@@ -15496,6 +15503,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0e7bcec024110574c919d23ebe8e9bae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1929152085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1929152074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15581208b715bf84b930526f858b4c11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2054638747

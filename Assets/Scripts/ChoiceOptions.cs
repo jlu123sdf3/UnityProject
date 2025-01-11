@@ -36,7 +36,6 @@ public class ChoiceOptions : MonoBehaviour
     private void showLevelPreview()
     {
         SceneManager.LoadScene(levels[index], LoadSceneMode.Additive);
-        
         Debug.Log("Active Scene : " + SceneManager.GetActiveScene().name);
     }
     private void UnloadCurrentScene()
@@ -51,6 +50,18 @@ public class ChoiceOptions : MonoBehaviour
             if (scene.name != levels[index])
                 SceneManager.UnloadSceneAsync(scene);
         }
+        StartLevel();
+    }
+    public void StartLevel()
+    {
+        PlayerPointsObject points = null;
+        while (points == null) { points = (PlayerPointsObject)FindObjectOfType(typeof(PlayerPointsObject));}
+        points.ShowView();
+        PlayerLivesObject lives = (PlayerLivesObject)FindObjectOfType(typeof(PlayerLivesObject));
+        lives.ShowView();
+        GameObject ball = GameObject.FindGameObjectWithTag("Ball");
+        Rigidbody ballRigidbody = ball.GetComponent<Rigidbody>();
+        ballRigidbody.useGravity = true;
     }
     private void OnClickReturn(ClickEvent click)
     {
@@ -65,7 +76,8 @@ public class ChoiceOptions : MonoBehaviour
     private void OnClickPrev(ClickEvent click)
     {
         UnloadCurrentScene();
-        index = (index - 1) % levels.Count;
+        index--;
+        if (index<0)index = levels.Count-1;
         showLevelPreview();
     }
 }

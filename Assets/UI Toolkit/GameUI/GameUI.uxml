@@ -1,11 +1,13 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI%20Toolkit/UnityThemes/ScoreDisplay.uss?fileID=7433441132597879392&amp;guid=834f9d896ea69cf45991a9e80637c92c&amp;type=3#ScoreDisplay" />
-    <ui:VisualElement name="Root" style="flex-grow: initial; flex-direction: row; align-items: flex-start; flex-shrink: initial;">
-        <ui:Label text="Score:" name="PointsLabel" class="ScoreDisplay" style="width: auto; align-items: flex-start; align-self: flex-start;" />
-        <ui:Label tabindex="-1" text="0" parse-escape-sequences="true" display-tooltip-when-elided="true" name="PointsValue" class="ScoreDisplay" style="align-items: auto; align-self: flex-start; justify-content: flex-start; -unity-text-align: upper-right; width: 43px; min-width: 30px;" />
-    </ui:VisualElement>
-    <ui:VisualElement name="LivesRoot" style="flex-grow: initial; flex-direction: row; align-items: flex-start; flex-shrink: initial; position: absolute; right: 0;">
+    <Style src="project://database/Assets/UI%20Toolkit/Menu/MenuStyling.uss?fileID=7433441132597879392&amp;guid=0ef336536058adf46b6121acaea44331&amp;type=3#MenuStyling" />
+    <ui:Button text="Return" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ReturnButton" class="btn gray red" style="position: absolute; bottom: 50px; right: 50px; cursor: url(&quot;project://database/Assets/UI%20Toolkit/Menu/pointer.png?fileID=2800000&amp;guid=89fb373b4dbc5a242a05319f4946ec69&amp;type=3#pointer&quot;); width: 174px; height: 59px; visibility: hidden;" />
+    <ui:VisualElement name="LivesRoot" style="flex-grow: initial; flex-direction: row; align-items: flex-start; flex-shrink: initial; position: absolute; right: 0; display: flex; visibility: hidden;">
         <ui:Label text="Lives:" name="LivesLabel" class="ScoreDisplay" style="width: auto; align-items: flex-start; align-self: flex-start;" />
         <ui:Label tabindex="-1" text="3" parse-escape-sequences="true" display-tooltip-when-elided="true" name="LivesValue" class="ScoreDisplay" style="align-items: auto; align-self: flex-start; justify-content: flex-start; -unity-text-align: upper-right; width: 43px; min-width: 30px;" />
+    </ui:VisualElement>
+    <ui:VisualElement name="PointsRoot" style="flex-grow: initial; flex-direction: row; align-items: flex-start; flex-shrink: initial; display: flex; visibility: hidden; align-self: flex-start;">
+        <ui:Label text="Score:" name="PointsLabel" class="ScoreDisplay" style="width: auto; align-items: flex-start; align-self: flex-start;" />
+        <ui:Label tabindex="-1" text="0" parse-escape-sequences="true" display-tooltip-when-elided="true" name="PointsValue" class="ScoreDisplay" style="align-items: auto; align-self: flex-start; justify-content: flex-start; -unity-text-align: upper-right; width: 43px; min-width: 30px;" />
     </ui:VisualElement>
 </ui:UXML>

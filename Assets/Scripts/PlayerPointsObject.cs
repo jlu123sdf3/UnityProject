@@ -15,6 +15,14 @@ public class PlayerPointsObject : MonoBehaviour
         document = GetComponent<UIDocument>();
         scoreLabel = document.rootVisualElement.Query("PointsValue").AtIndex(0) as Label;
     }
+    public void HideView()
+    {
+        document.rootVisualElement.Query("PointsRoot").AtIndex(0).style.visibility = Visibility.Hidden;
+    }
+    public void ShowView()
+    {
+        document.rootVisualElement.Query("PointsRoot").AtIndex(0).style.visibility = Visibility.Visible;
+    }
     public int Score { 
         get { return score; } 
         set { 

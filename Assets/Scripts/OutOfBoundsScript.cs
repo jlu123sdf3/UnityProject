@@ -5,10 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class OutOfBoundsScript : MonoBehaviour
 {
+    PlayerLivesObject lives;
+    public GameObject ball;
+    Vector3 startingPosition;
     // Start is called before the first frame update
     void Start()
     {
-        
+        lives = FindObjectOfType<PlayerLivesObject>();
+        ball = GameObject.FindGameObjectWithTag("Ball");
+        startingPosition = ball.transform.position;
     }
 
     // Update is called once per frame
@@ -24,8 +29,15 @@ public class OutOfBoundsScript : MonoBehaviour
             Rigidbody ballRigidbody = collision.gameObject.GetComponent<Rigidbody>();
             if (ballRigidbody != null)
             {
-                SceneManager.LoadScene("GameOverScene",LoadSceneMode.Additive);   
-            Debug.Log("GameObject over");
+                if (lives.Lives > 1) { 
+                    lives.Lives--; 
+                    ball.transform.position = startingPosition;
+                }
+                else
+                {
+                    Destroy(ball);
+                    SceneManager.LoadScene("GameOverScene", LoadSceneMode.Additive);
+                }
             }
         }
     }

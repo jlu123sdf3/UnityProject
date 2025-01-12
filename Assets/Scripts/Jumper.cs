@@ -2,13 +2,15 @@ using UnityEngine;
 
 public class Jumper : MonoBehaviour
 {
-    float jumpForce = 0.001f; // Jump power.
-  
-    public static int score = 0; // Static variable for counting
-
+    private float jumpForce; // Jump power.
+    private int addedPoints; // Jump power.
     PlayerPointsObject points;
+    [SerializeField]
+    bool extraJumper = false;
     private void Awake()
     {
+        jumpForce = extraJumper ? 0.001f : 0.0015f;
+        addedPoints = extraJumper ? 1 : 2;
         points = FindObjectOfType<PlayerPointsObject>();
     }
     void OnCollisionEnter(Collision collision)
@@ -22,8 +24,7 @@ public class Jumper : MonoBehaviour
                 ballRigidbody.AddForce(Vector3.forward * jumpForce);
 
                 // Increasing the score
-                points.Score++;
-                Debug.Log("Score: " + score); // We output the score to the console
+                points.Score+= addedPoints;
             }
         }
     }

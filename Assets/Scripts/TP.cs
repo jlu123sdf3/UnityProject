@@ -12,33 +12,28 @@ public class TP : MonoBehaviour
     {
         siblingScript =
             (TP)sibling.GetComponent(typeof(TP));
-
     }
     private void OnTriggerEnter(Collider other)
     {
         if (enabledTeleport && other.gameObject.CompareTag("Ball"))
         {
             Debug.Log("ball");
-            other.transform.position = sibling.transform.position;
             siblingScript.DisableTeleporter();
-            DisableTeleporter();
+            // Don't just swap positions - higher y value can make the ball bounce out of the board
+            other.transform.position = new Vector3(sibling.transform.position.x, other.transform.position.y, sibling.transform.position.z);
+            other.attachedRigidbody.velocity = new Vector3(-other.attachedRigidbody.velocity.x, other.attachedRigidbody.velocity.y, -other.attachedRigidbody.velocity.z);
         }
     }
     public void DisableTeleporter()
     {
-        StartCoroutine(startDisableTeleporter());
+        StartCoroutine(StartDisableTeleporter());
     }
-    IEnumerator startDisableTeleporter()
+    IEnumerator StartDisableTeleporter()
     {
-        Renderer renderer = GetComponent<Renderer>();
-        Material material = renderer.material;
-
-        material.DisableKeyword("_EMISSION");
         enabledTeleport = false;
-
-        yield return new WaitForSeconds(5);
-
-        material.EnableKeyword("_EMISSION");
+        yield return new WaitForSeconds(0.5f);
         enabledTeleport = true;
     }
 }
+
+

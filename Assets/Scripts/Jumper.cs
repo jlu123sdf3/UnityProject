@@ -9,7 +9,7 @@ public class Jumper : MonoBehaviour
     bool extraJumper = false;
     private void Awake()
     {
-        jumpForce = extraJumper ? 0.001f : 0.0015f;
+        jumpForce = extraJumper ? 0.01f : 0.015f;
         addedPoints = extraJumper ? 1 : 2;
         points = FindObjectOfType<PlayerPointsObject>();
     }
@@ -21,7 +21,7 @@ public class Jumper : MonoBehaviour
             if (ballRigidbody != null)
             {
                 // Adding Jump Force
-                ballRigidbody.AddForce(Vector3.forward * jumpForce);
+                ballRigidbody.AddForce(Vector3.up * jumpForce);
 
                 // Increasing the score
                 points.Score+= addedPoints;

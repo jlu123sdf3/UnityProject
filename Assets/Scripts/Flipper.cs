@@ -26,6 +26,16 @@ public class Flipper : MonoBehaviour
     [Tooltip("Indicates whether this flipper is the left flipper. (default - right flipper)")]
     [SerializeField] private bool leftFlipper;
 
+    [Header("Flipper Sound Settings")]
+    [Tooltip("The sound played when the flipper is raised.")]
+    [SerializeField] private AudioClip flipperRaisedSound;
+    [Tooltip("The sound played when the flipper is lowered.")]
+    [SerializeField] private AudioClip flipperLoweredSound;
+    [Tooltip("The sound played when the flipper hits the ball.")]
+    [SerializeField] private AudioClip hitSound;
+    private AudioSource audioSource;
+    private bool isFlipperRaised = false;
+
     float restPos = 0f;
     float pressedPos;
     private HingeJoint hinge;
@@ -40,6 +50,7 @@ public class Flipper : MonoBehaviour
         hinge = GetComponent<HingeJoint>();
         spring = hinge.spring;
         pressedPos = spring.targetPosition;
+        audioSource = GetComponent<AudioSource>();
     }
 
     void OnCollisionEnter(Collision collision)
@@ -49,6 +60,9 @@ public class Flipper : MonoBehaviour
             Rigidbody ballRigidbody = collision.gameObject.GetComponent<Rigidbody>();
             if (ballRigidbody != null)
             {
+                // Sound
+                audioSource.PlayOneShot(hitSound);
+
                 Vector3 ballVelocity = ballRigidbody.velocity;
                 Vector3 collisionNormal = collision.contacts[0].normal;
                 // Arcade
@@ -96,14 +110,29 @@ public class Flipper : MonoBehaviour
     {
         if (leftFlipper && IsAnyKeyPressed(leftKeys))
         {
+            if (!isFlipperRaised)
+            {
+                audioSource.PlayOneShot(flipperRaisedSound);
+                isFlipperRaised = true;
+            }
             spring.targetPosition = pressedPos;
         }
         else if (!leftFlipper && IsAnyKeyPressed(rightKeys))
         {
+            if (!isFlipperRaised)
+            {
+                audioSource.PlayOneShot(flipperRaisedSound);
+                isFlipperRaised = true;
+            }
             spring.targetPosition = pressedPos;
         }
         else
         {
+            if (isFlipperRaised)
+            {
+                audioSource.PlayOneShot(flipperLoweredSound);
+                isFlipperRaised = false;
+            }
             spring.targetPosition = restPos;
         }
 

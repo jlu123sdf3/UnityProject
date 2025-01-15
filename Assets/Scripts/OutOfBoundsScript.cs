@@ -32,6 +32,9 @@ public class OutOfBoundsScript : MonoBehaviour
                 if (lives.Lives > 1) { 
                     lives.Lives--; 
                     ball.transform.position = startingPosition;
+                    // Stopping the ball
+                    ballRigidbody.velocity = Vector3.zero;
+                    ballRigidbody.angularVelocity = Vector3.zero;
                 }
                 else
                 {

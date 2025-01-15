@@ -2278,7 +2278,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 709332108096432470, guid: 8a6cf5a870b87574db24e9e85bac326d, type: 3}
       propertyPath: m_UseGravity
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4130466794565275104, guid: 8a6cf5a870b87574db24e9e85bac326d, type: 3}
       propertyPath: m_Name
@@ -2361,7 +2361,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 390390211}
-  m_Material: {fileID: 13400000, guid: bdba5e76c71c10644a831096e8ddd2b7, type: 2}
+  m_Material: {fileID: 13400000, guid: 098250724ea5c044bb1729af76c8f5e3, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -7029,6 +7029,10 @@ PrefabInstance:
       propertyPath: m_Convex
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6433968538574627988, guid: 224e91dc10dfc474bbe2e80d643c263d, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 098250724ea5c044bb1729af76c8f5e3, type: 2}
     - target: {fileID: 8562335280635795587, guid: 224e91dc10dfc474bbe2e80d643c263d, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -13790,7 +13794,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1444508057}
-  m_Material: {fileID: 13400000, guid: bdba5e76c71c10644a831096e8ddd2b7, type: 2}
+  m_Material: {fileID: 13400000, guid: 098250724ea5c044bb1729af76c8f5e3, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -27920,6 +27924,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1347833582}
+    - target: {fileID: 3300070830215324621, guid: f32b6a71c6c75c64c89a9d59d7ea6524, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 098250724ea5c044bb1729af76c8f5e3, type: 2}
     - target: {fileID: 5455720746899975198, guid: f32b6a71c6c75c64c89a9d59d7ea6524, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -29266,7 +29274,7 @@ PrefabInstance:
     - target: {fileID: 6948987818826876455, guid: 2ea9d20b446ae974ba38829c4c11e706, type: 3}
       propertyPath: m_Material
       value: 
-      objectReference: {fileID: 13400000, guid: bdba5e76c71c10644a831096e8ddd2b7, type: 2}
+      objectReference: {fileID: 13400000, guid: 098250724ea5c044bb1729af76c8f5e3, type: 2}
     - target: {fileID: 7051115836669505548, guid: 2ea9d20b446ae974ba38829c4c11e706, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -30533,7 +30541,7 @@ PrefabInstance:
     - target: {fileID: 6948987818826876455, guid: 2ea9d20b446ae974ba38829c4c11e706, type: 3}
       propertyPath: m_Material
       value: 
-      objectReference: {fileID: 13400000, guid: bdba5e76c71c10644a831096e8ddd2b7, type: 2}
+      objectReference: {fileID: 13400000, guid: 098250724ea5c044bb1729af76c8f5e3, type: 2}
     - target: {fileID: 7051115836669505548, guid: 2ea9d20b446ae974ba38829c4c11e706, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -32043,7 +32051,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2058060909}
-  m_Material: {fileID: 13400000, guid: bdba5e76c71c10644a831096e8ddd2b7, type: 2}
+  m_Material: {fileID: 13400000, guid: 098250724ea5c044bb1729af76c8f5e3, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0

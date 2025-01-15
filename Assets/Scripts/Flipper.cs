@@ -31,8 +31,6 @@ public class Flipper : MonoBehaviour
     [SerializeField] private AudioClip flipperRaisedSound;
     [Tooltip("The sound played when the flipper is lowered.")]
     [SerializeField] private AudioClip flipperLoweredSound;
-    [Tooltip("The sound played when the flipper hits the ball.")]
-    [SerializeField] private AudioClip hitSound;
     private AudioSource audioSource;
     private bool isFlipperRaised = false;
 
@@ -60,9 +58,6 @@ public class Flipper : MonoBehaviour
             Rigidbody ballRigidbody = collision.gameObject.GetComponent<Rigidbody>();
             if (ballRigidbody != null)
             {
-                // Sound
-                audioSource.PlayOneShot(hitSound);
-
                 Vector3 ballVelocity = ballRigidbody.velocity;
                 Vector3 collisionNormal = collision.contacts[0].normal;
                 // Arcade

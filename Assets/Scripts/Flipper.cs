@@ -5,28 +5,41 @@ using UnityEngine;
 
 public class Flipper : MonoBehaviour
 {
-    [SerializeField] float restPos = 0f;
-    [SerializeField] float pressedPos = 45f;
-    [SerializeField] float springStrenght = 7000f;
+    [Header("Flipper Hit Settings Modifier")]
+    [Tooltip("Force multiplier applied by the flipper when hitting the ball.")]
+    [Range(0.1f, 10f)]
     [SerializeField] float hitStrenght = 5f;
-    [SerializeField] float flipperDamper = 50f;
+
+    [Header("Ball Speed Limiter")]
+    [Tooltip("Maximum speed that the ball can reach after being hit by the flipper.")]
+    [Range(10f, 500f)]
     [SerializeField] float maxSpeed = 100f;
+
+    [Header("Flipper Curve Modifiers")]
+    [Tooltip("Curve adjustment for the left flipper's ball trajectory. Higher values curve the ball more.")]
+    [Range(0f, 10f)]
+    [SerializeField] float curveModifierLeft = 0.5f;
+    [Tooltip("Curve adjustment for the right flipper's ball trajectory. Higher values curve the ball more.")]
+    [Range(0f, 10f)]
+    [SerializeField] float curveModifierRight = 0.5f;
+
+    [Tooltip("Indicates whether this flipper is the left flipper. (default - right flipper)")]
     [SerializeField] private bool leftFlipper;
-    float curveModifierLeft = 0.5f;
-    float curveModifierRight = 0.5f;
+
+    float restPos = 0f;
+    float pressedPos;
     private HingeJoint hinge;
     private JointSpring spring;
 
     // Flippers control keys
-    [SerializeField] private KeyCode[] leftKeys = { KeyCode.A, KeyCode.LeftArrow };
-    [SerializeField] private KeyCode[] rightKeys = { KeyCode.D, KeyCode.RightArrow };
+    [SerializeField] private KeyCode[] leftKeys = { KeyCode.A, KeyCode.LeftArrow, KeyCode.LeftShift };
+    [SerializeField] private KeyCode[] rightKeys = { KeyCode.D, KeyCode.RightArrow, KeyCode.RightShift };
 
     void Start()
     {
         hinge = GetComponent<HingeJoint>();
-        hinge.useSpring = true;
-        spring = new JointSpring();
-        hinge.useLimits = true;
+        spring = hinge.spring;
+        pressedPos = spring.targetPosition;
     }
 
     void OnCollisionEnter(Collision collision)
@@ -38,7 +51,7 @@ public class Flipper : MonoBehaviour
             {
                 Vector3 ballVelocity = ballRigidbody.velocity;
                 Vector3 collisionNormal = collision.contacts[0].normal;
-                //Arcade
+                // Arcade
                 if (leftFlipper)
                 {
                     collisionNormal = Vector3.Lerp(collisionNormal, transform.right, curveModifierLeft);
@@ -58,7 +71,7 @@ public class Flipper : MonoBehaviour
                 }
 
                 Vector3 finalVelocity = reflectedVelocity + flipperVelocity * hitStrenght;
-                //Arcade
+                // Arcade
                 finalVelocity = Vector3.ClampMagnitude(finalVelocity, maxSpeed);
 
 
@@ -81,10 +94,6 @@ public class Flipper : MonoBehaviour
 
     void Update()
     {
-        spring.spring = springStrenght;
-        spring.damper = flipperDamper;
-        hinge.spring = spring;
-
         if (leftFlipper && IsAnyKeyPressed(leftKeys))
         {
             spring.targetPosition = pressedPos;
@@ -97,5 +106,7 @@ public class Flipper : MonoBehaviour
         {
             spring.targetPosition = restPos;
         }
+
+        hinge.spring = spring;
     }
 }

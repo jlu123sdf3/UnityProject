@@ -1804,11 +1804,11 @@ HingeJoint:
   m_AutoConfigureConnectedAnchor: 1
   m_ConnectedAnchor: {x: 959.291, y: 537.5285, z: 0.772}
   serializedVersion: 2
-  m_UseSpring: 0
+  m_UseSpring: 1
   m_Spring:
-    spring: 0
-    damper: 0
-    targetPosition: 0
+    spring: 7000
+    damper: 50
+    targetPosition: -45
   m_UseMotor: 0
   m_Motor:
     targetVelocity: 0
@@ -1871,11 +1871,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb16adbc88cbb344ea2f4bceb4cbae7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  restPos: 0
-  pressedPos: -45
-  hitStrenght: 1000
-  flipperDamper: 50
+  hitStrenght: 5
+  maxSpeed: 100
+  curveModifierLeft: 0.5
+  curveModifierRight: 0.5
   leftFlipper: 1
+  leftKeys: 610000001401000030010000
+  rightKeys: 64000000130100002f010000
 --- !u!33 &1167921039823639636
 MeshFilter:
   m_ObjectHideFlags: 0

@@ -2294,7 +2294,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7339267072155892753, guid: 8a6cf5a870b87574db24e9e85bac326d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.16
+      value: 0.464
       objectReference: {fileID: 0}
     - target: {fileID: 7339267072155892753, guid: 8a6cf5a870b87574db24e9e85bac326d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4463,7 +4463,7 @@ PrefabInstance:
       objectReference: {fileID: 1887950269}
     - target: {fileID: 4106683604498912103, guid: 224e91dc10dfc474bbe2e80d643c263d, type: 3}
       propertyPath: m_VersionIndex
-      value: 928
+      value: 952
       objectReference: {fileID: 0}
     - target: {fileID: 4477764476182471725, guid: 224e91dc10dfc474bbe2e80d643c263d, type: 3}
       propertyPath: m_Mesh
@@ -4471,7 +4471,7 @@ PrefabInstance:
       objectReference: {fileID: 743639821}
     - target: {fileID: 4477764476182471725, guid: 224e91dc10dfc474bbe2e80d643c263d, type: 3}
       propertyPath: m_VersionIndex
-      value: 3035
+      value: 3059
       objectReference: {fileID: 0}
     - target: {fileID: 4477764476182471725, guid: 224e91dc10dfc474bbe2e80d643c263d, type: 3}
       propertyPath: m_SelectedEdges.Array.size
@@ -7014,8 +7014,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4624209680176235238, guid: 224e91dc10dfc474bbe2e80d643c263d, type: 3}
+      propertyPath: maxSpeed
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4624209680176235238, guid: 224e91dc10dfc474bbe2e80d643c263d, type: 3}
       propertyPath: hitStrenght
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4624209680176235238, guid: 224e91dc10dfc474bbe2e80d643c263d, type: 3}
+      propertyPath: springStrenght
+      value: 7000
       objectReference: {fileID: 0}
     - target: {fileID: 4624209680176235238, guid: 224e91dc10dfc474bbe2e80d643c263d, type: 3}
       propertyPath: velocityMultiplier
@@ -7116,6 +7124,22 @@ PrefabInstance:
     - target: {fileID: 8562335280635795587, guid: 224e91dc10dfc474bbe2e80d643c263d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8893055898454719123, guid: 224e91dc10dfc474bbe2e80d643c263d, type: 3}
+      propertyPath: m_UseLimits
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8893055898454719123, guid: 224e91dc10dfc474bbe2e80d643c263d, type: 3}
+      propertyPath: m_Limits.max
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8893055898454719123, guid: 224e91dc10dfc474bbe2e80d643c263d, type: 3}
+      propertyPath: m_Limits.min
+      value: -45
+      objectReference: {fileID: 0}
+    - target: {fileID: 8893055898454719123, guid: 224e91dc10dfc474bbe2e80d643c263d, type: 3}
+      propertyPath: m_Spring.targetPosition
+      value: -45
       objectReference: {fileID: 0}
     - target: {fileID: 8902194461681531072, guid: 224e91dc10dfc474bbe2e80d643c263d, type: 3}
       propertyPath: m_Name
@@ -27906,7 +27930,7 @@ PrefabInstance:
       objectReference: {fileID: 1347833582}
     - target: {fileID: 818210452419599727, guid: f32b6a71c6c75c64c89a9d59d7ea6524, type: 3}
       propertyPath: m_VersionIndex
-      value: 3098
+      value: 3119
       objectReference: {fileID: 0}
     - target: {fileID: 818210452419599727, guid: f32b6a71c6c75c64c89a9d59d7ea6524, type: 3}
       propertyPath: m_SelectedEdges.Array.size
@@ -27929,8 +27953,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1347833582}
     - target: {fileID: 4653387942369860622, guid: f32b6a71c6c75c64c89a9d59d7ea6524, type: 3}
+      propertyPath: maxSpeed
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4653387942369860622, guid: f32b6a71c6c75c64c89a9d59d7ea6524, type: 3}
       propertyPath: hitStrenght
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4653387942369860622, guid: f32b6a71c6c75c64c89a9d59d7ea6524, type: 3}
+      propertyPath: springStrenght
+      value: 7000
       objectReference: {fileID: 0}
     - target: {fileID: 4653387942369860622, guid: f32b6a71c6c75c64c89a9d59d7ea6524, type: 3}
       propertyPath: velocityMultiplier
@@ -27954,7 +27986,7 @@ PrefabInstance:
       objectReference: {fileID: 477602822}
     - target: {fileID: 8405033665697047470, guid: f32b6a71c6c75c64c89a9d59d7ea6524, type: 3}
       propertyPath: m_VersionIndex
-      value: 889
+      value: 910
       objectReference: {fileID: 0}
     - target: {fileID: 8515757465982582166, guid: f32b6a71c6c75c64c89a9d59d7ea6524, type: 3}
       propertyPath: m_Pivot.x
@@ -28035,6 +28067,10 @@ PrefabInstance:
     - target: {fileID: 8515757465982582166, guid: f32b6a71c6c75c64c89a9d59d7ea6524, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8974074464048287668, guid: f32b6a71c6c75c64c89a9d59d7ea6524, type: 3}
+      propertyPath: m_UseLimits
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -12,11 +12,14 @@ public class Starter : MonoBehaviour
     [SerializeField] UnityEngine.UI.Slider powerSlider;
     private Rigidbody ball = null;
     bool ballReady;
+    private AudioSource chargingSound;
 
     void Start()
     {
         powerSlider.minValue = minPower;
         powerSlider.maxValue = maxPower;
+
+        chargingSound = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -30,18 +33,33 @@ public class Starter : MonoBehaviour
                 {
                     power += powerStep * Time.deltaTime;
                 }
+                if (chargingSound != null && !chargingSound.isPlaying)
+                {
+                    UnityEngine.Debug.Log("Start playing");
+                    chargingSound.Play();
+                }
             }
             if (Input.GetKeyUp(KeyCode.Space))
             {
                 // Add increased force along the Z axis
                 ball.AddForce(power * Vector3.forward, ForceMode.Impulse);  // Using Impulse for instant power
                 power = minPower; // Reset the power after use
+
+                if (chargingSound != null && chargingSound.isPlaying)
+                {
+                    chargingSound.Stop();
+                }
             }
         }
         else
         {
             ballReady = false;
             power = minPower;
+
+            if (chargingSound != null && chargingSound.isPlaying)
+            {
+                chargingSound.Stop();
+            }
         }
 
         powerSlider.gameObject.SetActive(ballReady);
@@ -62,6 +80,11 @@ public class Starter : MonoBehaviour
         {
             ball = null;
             power = minPower;
+
+            if (chargingSound != null && chargingSound.isPlaying)
+            {
+                chargingSound.Stop();
+            }
         }
     }
 }

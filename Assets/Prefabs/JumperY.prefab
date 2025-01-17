@@ -2768,3 +2768,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   extraJumper: 0
+  hitSound: {fileID: 0}

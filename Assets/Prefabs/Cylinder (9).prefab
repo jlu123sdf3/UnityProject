@@ -3207,15 +3207,9 @@ MonoBehaviour:
   m_Mesh: {fileID: 0}
   m_VersionIndex: 2061
   m_IsSelectable: 1
-  m_SelectedFaces: 57000000
-  m_SelectedEdges:
-  - a: 309
-    b: 310
-  - a: 310
-    b: 311
-  - a: 311
-    b: 309
-  m_SelectedVertices: 350100003601000037010000
+  m_SelectedFaces: 
+  m_SelectedEdges: []
+  m_SelectedVertices: 
 --- !u!114 &5207217802013763533
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3332,3 +3326,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   extraJumper: 0
+  hitSound: {fileID: 0}

@@ -22,7 +22,7 @@
     border-bottom-width: 7px;
     border-left-width: 3px;
     padding-bottom: 14px;
-    margin-top: 54px;
+    margin-top: 4%;
     -unity-font-definition: url("project://database/Assets/UI%20Toolkit/UnityThemes/Neon%20SDF.asset?fileID=11400000&guid=10f51b4829c3b4c40b0594192b118d30&type=2#Neon SDF");
     cursor: url("project://database/Assets/UI%20Toolkit/Menu/pointer.png?fileID=2800000&guid=89fb373b4dbc5a242a05319f4946ec69&type=3#pointer");
 }

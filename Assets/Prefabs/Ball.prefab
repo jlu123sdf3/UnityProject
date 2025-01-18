@@ -253,9 +253,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 4130466794565275104}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b34365d501d9cfb4c8da5583e5d8d11e, type: 3}
+  m_Script: {fileID: 11500000, guid: b57e05ac03ab3cc4d86a8fde7303a6a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   hitSound: {fileID: 8300000, guid: 386574b8d67e6664aa652f2056719647, type: 3}
   velocityThreshold: 0.1
   maxVolume: 1
+  leftKeys: 32010000
+  rightKeys: 31010000
+  hitForce: 0.01
+  cameraTransform: {fileID: 0}
+  planeTransform: {fileID: 0}
+  shakeIntensity: 0.1
+  shakeDuration: 0.05
+  shakeSound: {fileID: 8300000, guid: be22d2567188d4540be5139754072e26, type: 3}

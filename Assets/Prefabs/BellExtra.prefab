@@ -2010,7 +2010,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   extraJumper: 1
-  hitSound: {fileID: 8300000, guid: 02cb1353191a1434c85d55632ad64b4c, type: 3}
+  hitSound: {fileID: 8300000, guid: a546eed831b40ab40be95a817f69fdc5, type: 3}
 --- !u!82 &874920172829192248
 AudioSource:
   m_ObjectHideFlags: 0

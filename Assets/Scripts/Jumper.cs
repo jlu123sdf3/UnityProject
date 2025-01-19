@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using UnityEngine;
 
 public class Jumper : MonoBehaviour
@@ -7,15 +8,22 @@ public class Jumper : MonoBehaviour
     PlayerPointsObject points;
     [SerializeField] bool extraJumper = false;
 
+    [Header("Ball Collision Power Settings")]
+    [SerializeField] private float basePower = 1.2f;
+    [SerializeField] private float extraPower = 1.6f;
+
     [Header("Ball Collision Sound Settings")]
     [Tooltip("The sound played when the ball hits something.")]
     [SerializeField] private AudioClip hitSound;
+
+    [SerializeField] float maxSpeed = 100f;
+    [SerializeField] float hopUp = 1.0f;
 
     private AudioSource audioSource;
 
     private void Awake()
     {
-        jumpForce = extraJumper ? 0.01f : 0.015f;
+        jumpForce = extraJumper ? basePower : extraPower;
         addedPoints = extraJumper ? 1 : 2;
         points = FindObjectOfType<PlayerPointsObject>();
         audioSource = GetComponent<AudioSource>();
@@ -30,8 +38,18 @@ public class Jumper : MonoBehaviour
             {
                 audioSource.PlayOneShot(hitSound);
 
-                // Adding Jump Force
-                ballRigidbody.AddForce(Vector3.up * jumpForce);
+                Vector3 ballVelocity = ballRigidbody.velocity;
+                Vector3 collisionNormal = collision.contacts[0].normal;
+
+                collisionNormal = Vector3.Lerp(collisionNormal, transform.forward, hopUp);
+
+                Vector3 reflectedVelocity = Vector3.Reflect(ballVelocity, collisionNormal);
+
+                Vector3 finalVelocity = reflectedVelocity * jumpForce;
+
+                finalVelocity = Vector3.ClampMagnitude(finalVelocity, maxSpeed);
+
+                ballRigidbody.AddForce(finalVelocity - ballRigidbody.velocity, ForceMode.VelocityChange);
 
                 // Increasing the score
                 points.Score+= addedPoints;

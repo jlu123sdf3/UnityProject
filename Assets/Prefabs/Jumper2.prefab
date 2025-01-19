@@ -1677,4 +1677,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 139ca01bd54fcb74594d4899809a1c39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 500
+  extraJumper: 0
+  basePower: 1.2
+  extraPower: 1.6
+  hitSound: {fileID: 8300000, guid: ea89ebab34815ea49844c04c1dadc186, type: 3}
+  maxSpeed: 100
+  hopUp: 1

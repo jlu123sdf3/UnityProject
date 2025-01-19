@@ -2010,7 +2010,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   extraJumper: 1
+  basePower: 1.2
+  extraPower: 1.6
   hitSound: {fileID: 8300000, guid: a546eed831b40ab40be95a817f69fdc5, type: 3}
+  maxSpeed: 100
 --- !u!82 &874920172829192248
 AudioSource:
   m_ObjectHideFlags: 0

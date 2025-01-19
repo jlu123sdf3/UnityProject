@@ -3342,4 +3342,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   extraJumper: 0
-  hitSound: {fileID: 0}
+  basePower: 1.2
+  extraPower: 1.6
+  hitSound: {fileID: 8300000, guid: a546eed831b40ab40be95a817f69fdc5, type: 3}
+  maxSpeed: 100
+  hopUp: 1

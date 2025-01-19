@@ -27,22 +27,26 @@ public class OutOfBoundsScript : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Ball"))
         {
-            Rigidbody ballRigidbody = collision.gameObject.GetComponent<Rigidbody>();
-            if (ballRigidbody != null)
+            if (collision.gameObject.GetComponent<Ball>().originalBall == true)
             {
-                if (lives.Lives > 1) { 
-                    lives.Lives--; 
-                    ball.transform.position = startingPosition;
-                    // Stopping the ball
-                    ballRigidbody.velocity = Vector3.zero;
-                    ballRigidbody.angularVelocity = Vector3.zero;
-                }
-                else
+                Rigidbody ballRigidbody = collision.gameObject.GetComponent<Rigidbody>();
+                if (ballRigidbody != null)
                 {
-                    SaveHighScore();
-                    Destroy(ball);
+                    if (lives.Lives > 1)
+                    {
+                        lives.Lives--;
+                        ball.transform.position = startingPosition;
+                        // Stopping the ball
+                        ballRigidbody.velocity = Vector3.zero;
+                        ballRigidbody.angularVelocity = Vector3.zero;
+                    }
+                    else
+                    {
+                        SaveHighScore();
+                        Destroy(ball);
 
-                    SceneManager.LoadScene("GameOverScene", LoadSceneMode.Additive);
+                        SceneManager.LoadScene("GameOverScene", LoadSceneMode.Additive);
+                    }
                 }
             }
         }

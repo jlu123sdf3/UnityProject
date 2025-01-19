@@ -39,6 +39,8 @@ public class Ball : MonoBehaviour
 
     [SerializeField] private AudioClip shakeSound;
 
+    public bool originalBall = true;
+
     // Start is called before the first frame update
     void Start()
     {

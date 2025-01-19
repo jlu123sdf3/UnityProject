@@ -52,7 +52,7 @@ public class MenuOptions : MonoBehaviour
     }
     private void OnClickOpenScores(ClickEvent click)
     {
-        Debug.Log("Scores");
+        SceneManager.LoadScene("Scores", LoadSceneMode.Single);
     }
     private void OnClickQuit(ClickEvent click)
     {

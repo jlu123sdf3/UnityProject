@@ -17,7 +17,7 @@ public class PlayerLivesObject : MonoBehaviour
     {
         document = GetComponent<UIDocument>();
         livesLabel = document.rootVisualElement.Query("LivesValue").AtIndex(0) as Label;
-        Lives = 1;
+        Lives = 3;
         returnBtn = document.rootVisualElement.Query("ReturnButton").AtIndex(0) as Button;
         returnBtn.RegisterCallback<ClickEvent>(OnClickReturn);
     }

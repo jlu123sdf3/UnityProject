@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -38,10 +39,28 @@ public class OutOfBoundsScript : MonoBehaviour
                 }
                 else
                 {
+                    SaveHighScore();
                     Destroy(ball);
+
                     SceneManager.LoadScene("GameOverScene", LoadSceneMode.Additive);
                 }
             }
+        }
+    }
+
+    private void SaveHighScore()
+    {
+        PlayerPointsObject pointsObject = FindObjectOfType<PlayerPointsObject>();
+        if (pointsObject != null)
+        {
+            int finalScore = pointsObject.Score;
+            string playerName = PlayerPrefs.GetString("nametag", "Player");
+            HighScore.HighScoreManager.AddHighScore(playerName, finalScore); 
+            UnityEngine.Debug.Log($"Saved: {playerName} - {finalScore}");
+        }
+        else
+        {
+            UnityEngine.Debug.LogWarning("No PlayerPointsObject");
         }
     }
 }

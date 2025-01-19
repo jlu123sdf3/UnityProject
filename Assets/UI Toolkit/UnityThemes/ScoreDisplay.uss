@@ -2,4 +2,10 @@
     background-color: rgba(253, 236, 236, 0);
     font-size: 35px;
     -unity-font-definition: url("project://database/Assets/UI%20Toolkit/UnityThemes/Neon%20SDF.asset?fileID=11400000&guid=10f51b4829c3b4c40b0594192b118d30&type=2#Neon SDF");
+    color: rgb(159, 0, 0);
+    -unity-text-outline-color: rgba(255, 255, 255, 0);
+    -unity-text-outline-width: 0;
+    text-shadow: 1px 1px 2px rgba(255, 52, 52, 0);
+    -unity-font-style: bold;
+    letter-spacing: 3px;
 }

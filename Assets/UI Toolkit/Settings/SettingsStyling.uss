@@ -1,0 +1,123 @@
+.title {
+    font-size: 132px;
+    align-items: auto;
+    padding-top: 55px;
+}
+
+.btn {
+    width: 234px;
+    height: 72px;
+    justify-content: flex-start;
+    align-items: center;
+    align-self: center;
+    font-size: 40px;
+    color: rgb(0, 0, 0);
+    transition-duration: 0.2s;
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
+    border-bottom-right-radius: 14px;
+    border-bottom-left-radius: 14px;
+    border-top-width: 3px;
+    border-right-width: 3px;
+    border-bottom-width: 7px;
+    border-left-width: 3px;
+    padding-bottom: 14px;
+    margin-top: 4%;
+    -unity-font-definition: url("project://database/Assets/UI%20Toolkit/UnityThemes/Neon%20SDF.asset?fileID=11400000&guid=10f51b4829c3b4c40b0594192b118d30&type=2#Neon SDF");
+    cursor: url("project://database/Assets/UI%20Toolkit/Menu/pointer.png?fileID=2800000&guid=89fb373b4dbc5a242a05319f4946ec69&type=3#pointer");
+}
+
+.gray {
+    background-color: rgba(76, 85, 100, 0);
+    scale: 1 1;
+}
+
+.green {
+    color: rgb(1, 37, 35);
+    background-color: rgb(21, 183, 165);
+    border-left-color: rgb(14, 119, 106);
+    border-right-color: rgb(14, 119, 106);
+    border-top-color: rgb(14, 119, 106);
+    border-bottom-color: rgb(14, 119, 106);
+}
+
+.red {
+    border-left-color: rgb(78, 13, 13);
+    border-right-color: rgb(78, 13, 13);
+    border-top-color: rgb(78, 13, 13);
+    border-bottom-color: rgb(78, 13, 13);
+    background-color: rgb(141, 53, 53);
+}
+
+.btn:hover {
+    scale: 1.3 1.3;
+    margin-bottom: 10px;
+}
+
+.mainBtn {
+    scale: 1.2 1.2;
+}
+
+TextField > TextInput {
+    background-color: rgba(197, 143, 143, 0);
+    border-left-color: rgba(56, 56, 56, 0);
+    border-right-color: rgba(56, 56, 56, 0);
+    border-top-color: rgba(56, 56, 56, 0);
+    border-bottom-color: rgba(56, 56, 56, 0);
+    font-size: 28px;
+    cursor: url("project://database/Assets/UI%20Toolkit/Menu/pointer.png?fileID=2800000&guid=89fb373b4dbc5a242a05319f4946ec69&type=3#pointer");
+}
+
+TextField {
+    cursor: url("project://database/Assets/UI%20Toolkit/Menu/cursor.png?fileID=2800000&guid=ccd4df7712b9dfc4ca6f2d69da6117d0&type=3#cursor");
+}
+
+TextField > Label {
+    cursor: url("project://database/Assets/UI%20Toolkit/Menu/cursor.png?fileID=2800000&guid=ccd4df7712b9dfc4ca6f2d69da6117d0&type=3#cursor");
+}
+
+TextField > TextInput:hover {
+    background-color: rgba(197, 143, 143, 0);
+    border-left-color: rgba(56, 56, 56, 0);
+    border-right-color: rgba(56, 56, 56, 0);
+    border-top-color: rgba(56, 56, 56, 0);
+    border-bottom-color: rgba(56, 56, 56, 0);
+    font-size: 28px;
+    cursor: url("project://database/Assets/UI%20Toolkit/Menu/pointer.png?fileID=2800000&guid=89fb373b4dbc5a242a05319f4946ec69&type=3#pointer");
+}
+
+.slider {
+    height: 10px;    
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.slider .unity-slider__thumb {
+    
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.label {
+    font-size: 25px;
+    font-family: "Arial";
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.toggle {
+    font-size: 25px;  
+    font-family: "Arial";
+    text-align: left;
+    margin-top: 10px;
+}
+
+.dropdown {
+    font-size: 25px;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 10px;
+    text-align: center;
+}

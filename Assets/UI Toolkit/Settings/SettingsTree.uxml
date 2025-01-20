@@ -1,0 +1,9 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/Settings/SettingsStyling.uss?fileID=7433441132597879392&amp;guid=ff70b33a284fe64418554f1ddd196efe&amp;type=3#SettingsStyling" />
+    <ui:VisualElement name="VisualElement" style="flex-grow: 1; align-items: center; justify-content: space-between; padding-top: 20px; padding-right: 20px; padding-bottom: 20px; padding-left: 20px; height: auto; width: auto; position: absolute; left: 0; top: 0; right: 0; bottom: 0;">
+        <ui:Slider label="Volume" high-value="100" name="volumeSlider" class="slider label green" style="flex-direction: column; align-items: center; justify-content: space-between; margin-top: 20px; margin-right: 20px; margin-bottom: 20px; margin-left: 20px; width: 300px; height: auto; font-size: 20px;" />
+        <ui:Toggle label="FullScreen" name="fullscreenToggle" class="toggle" style="position: relative; top: auto; left: auto; font-size: 20px; -unity-text-align: upper-center; flex-direction: column; align-items: center; justify-content: center; margin-top: 20px; margin-right: 20px; margin-bottom: 20px; margin-left: 20px;" />
+        <ui:DropdownField label="Dropdown" name="resolutionDropdown" class="dropdown green" style="margin-top: 20px; margin-right: 20px; margin-bottom: 20px; margin-left: 20px;" />
+        <ui:Button text="Back" parse-escape-sequences="true" display-tooltip-when-elided="true" name="backBtn" class="btn red" style="width: 200px; position: relative; top: auto; left: auto; justify-content: center; margin-top: 20%; margin-right: 20%; margin-bottom: 20%; margin-left: 20%; height: 50px;" />
+    </ui:VisualElement>
+</ui:UXML>

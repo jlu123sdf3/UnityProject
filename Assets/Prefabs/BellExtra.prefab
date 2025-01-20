@@ -2014,6 +2014,7 @@ MonoBehaviour:
   extraPower: 1.6
   hitSound: {fileID: 8300000, guid: a546eed831b40ab40be95a817f69fdc5, type: 3}
   maxSpeed: 100
+  hopUp: 1
 --- !u!82 &874920172829192248
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2023,7 +2024,7 @@ AudioSource:
   m_GameObject: {fileID: 3308947028025032890}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: a52408f4e7e642f4e88e8197b62a60f8, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1

@@ -46,9 +46,12 @@ public class MenuOptions : MonoBehaviour
     {
         SceneManager.LoadScene("LevelChoice", LoadSceneMode.Single);
     }
+
     private void OnClickOpenSettings(ClickEvent click)
     {
-        Debug.Log("Settings");
+        
+       SceneManager.LoadScene("SettingsScene",LoadSceneMode.Single); 
+        
     }
     private void OnClickOpenScores(ClickEvent click)
     {

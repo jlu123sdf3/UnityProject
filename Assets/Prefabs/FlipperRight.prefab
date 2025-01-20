@@ -3587,7 +3587,6 @@ MonoBehaviour:
   leftFlipper: 0
   flipperRaisedSound: {fileID: 8300000, guid: a52a1292a2d6a3f468564ee2585aa9db, type: 3}
   flipperLoweredSound: {fileID: 8300000, guid: 5ab8c76854a1c6347ba3f919e7f647b3, type: 3}
-  hitSound: {fileID: 8300000, guid: 386574b8d67e6664aa652f2056719647, type: 3}
   leftKeys: 610000001401000030010000
   rightKeys: 64000000130100002f010000
 --- !u!82 &-740140179280379247
@@ -3599,7 +3598,7 @@ AudioSource:
   m_GameObject: {fileID: 1667359746481891193}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: a52408f4e7e642f4e88e8197b62a60f8, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1

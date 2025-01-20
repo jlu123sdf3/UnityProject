@@ -7,11 +7,13 @@ using UnityEngine.SceneManagement;
 public class OutOfBoundsScript : MonoBehaviour
 {
     PlayerLivesObject lives;
+    PlayerPointsObject pointsObject;
     public GameObject ball;
     Vector3 startingPosition;
     // Start is called before the first frame update
     void Start()
     {
+        pointsObject = FindObjectOfType<PlayerPointsObject>();
         lives = FindObjectOfType<PlayerLivesObject>();
         ball = GameObject.FindGameObjectWithTag("Ball");
         startingPosition = ball.transform.position;
@@ -35,6 +37,7 @@ public class OutOfBoundsScript : MonoBehaviour
                     if (lives.Lives > 1)
                     {
                         lives.Lives--;
+                        pointsObject.resetMultiplier();
                         ball.transform.position = startingPosition;
                         // Stopping the ball
                         ballRigidbody.velocity = Vector3.zero;
@@ -54,7 +57,6 @@ public class OutOfBoundsScript : MonoBehaviour
 
     private void SaveHighScore()
     {
-        PlayerPointsObject pointsObject = FindObjectOfType<PlayerPointsObject>();
         if (pointsObject != null)
         {
             int finalScore = pointsObject.Score;

@@ -10,4 +10,8 @@
         <ui:Label text="Score:" name="PointsLabel" class="ScoreDisplay" style="width: auto; align-items: flex-start; align-self: flex-start;" />
         <ui:Label tabindex="-1" text="0" parse-escape-sequences="true" display-tooltip-when-elided="true" name="PointsValue" class="ScoreDisplay" style="align-items: auto; align-self: flex-start; justify-content: flex-start; -unity-text-align: upper-right; width: 43px; min-width: 30px;" />
     </ui:VisualElement>
+    <ui:VisualElement name="MultiplierRoot" style="flex-grow: initial; flex-direction: row; align-items: flex-start; flex-shrink: initial; display: flex; visibility: hidden; align-self: flex-start; margin-top: 5px;">
+        <ui:Label text="Multiplier" name="MultiplierLabel" class="ScoreDisplay" style="width: auto; align-items: flex-start; align-self: flex-start;" />
+        <ui:Label tabindex="-1" text="x 1" parse-escape-sequences="true" display-tooltip-when-elided="true" name="MultiplierValue" class="ScoreDisplay" style="align-items: auto; align-self: flex-start; justify-content: flex-start; -unity-text-align: upper-right; width: 43px; min-width: 30px;" />
+    </ui:VisualElement>
 </ui:UXML>

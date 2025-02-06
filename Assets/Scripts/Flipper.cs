@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Flipper : MonoBehaviour
 {
@@ -103,6 +104,8 @@ public class Flipper : MonoBehaviour
 
     void Update()
     {
+        if (SceneManager.GetActiveScene().name == "LevelChoice") return;
+
         if (leftFlipper && IsAnyKeyPressed(leftKeys))
         {
             if (!isFlipperRaised)

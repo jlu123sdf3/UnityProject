@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Starter : MonoBehaviour
@@ -24,6 +25,8 @@ public class Starter : MonoBehaviour
 
     void Update()
     {
+        if (SceneManager.GetActiveScene().name == "LevelChoice") return;
+
         if (ball != null)
         {
             ballReady = true;

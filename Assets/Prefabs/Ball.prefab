@@ -267,3 +267,4 @@ MonoBehaviour:
   shakeIntensity: 0.1
   shakeDuration: 0.05
   shakeSound: {fileID: 8300000, guid: be22d2567188d4540be5139754072e26, type: 3}
+  originalBall: 1
